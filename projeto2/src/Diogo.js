@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-
-function Diogo() {
-  return (
-    <div>
-        Eu sou um componente!
-    </div>
-  );
+class Diogo extends Component {
+    render(){
+        return(
+            <div>
+                Eu sou um component chamado Diogo.
+            </div>
+        )
+    }
 }
 
 export default Diogo;
