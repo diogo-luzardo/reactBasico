@@ -6,12 +6,14 @@ import Diogo from './Diogo'
 class App extends Component {
 
   constructor(props){
-    super(props)
+    super (props)
     this.state = {
-      name:"Arthur"
+      name:"Arthur",
+      email:"arthurvl@gmail.com"
     }
     this.changeState = this.changeState.bind(this)
     this.resetState = this.resetState.bind(this)
+    this.changeInput = this.changeInput.bind(this)
   }
 
   changeState() {
@@ -26,6 +28,14 @@ class App extends Component {
     })
   }
 
+  changeInput(event) {
+    let target = event.target
+    let index = target.name
+    this.setState({
+      [index]:target.value
+    })
+  }
+
   render(){
     return (
       <div className="App">
@@ -36,7 +46,17 @@ class App extends Component {
           </p>
             <Diogo />
           <div>
-            {this.state.name}
+            <form>
+              <label>Nome:
+                <input type="text" name="name" value={this.state.name} onChange={this.changeInput}></input>
+              </label>
+            </form>
+            <form>
+              <label>Email:
+                <input type="email" name="email" value={this.state.email} onChange={this.changeInput}></input>
+              </label>
+            </form>
+            {this.state.name} - {this.state.email}
           </div>
           <div>
             <button onClick={this.changeState}>Mudar nome</button>
