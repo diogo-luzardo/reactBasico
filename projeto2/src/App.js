@@ -2,6 +2,8 @@ import React, { Component }from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Diogo from './Diogo'
+import List from './List'
+
 
 class App extends Component {
 
@@ -61,6 +63,7 @@ class App extends Component {
           <div>
             <button onClick={this.changeState}>Mudar nome</button>
             <button onClick={this.resetState}>Resetar o nome</button>
+            <List />
           </div>
         </header>
       </div>
