@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import User from './User'
+import User from './Users'
 import photo from './img/user.png'
-
-
 
 class Diogo extends Component {
     render(){
@@ -11,7 +9,7 @@ class Diogo extends Component {
                 Eu sou um component chamado Diogo.
                 <User name="Diogo" photo={photo}/>
             </div>
-        )
+        );
     }
 }
 
